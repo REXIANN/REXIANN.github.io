@@ -67,6 +67,7 @@ end
 Indentation matters. Be sure the indent of the code block aligns with the first non-space character after the list item marker (e.g., `1.`). Usually this will mean indenting 3 spaces instead of 4.
 
 1. Do step 1.
+
 2. Now do this:
 
    ```ruby
@@ -76,8 +77,18 @@ Indentation matters. Be sure the indent of the code block aligns with the first 
    print_hi('Tom')
    #=> prints 'Hi, Tom' to STDOUT.
    ```
-        
+   
 3. Now you can do this.
+
+### Math
+
+Type on Strap uses KaTeX to display maths. Equations such as $$S_n = a \times \frac{1-r^n}{1-r}$$ can be displayed inline.
+
+Alternatively, they can be shown on a new line:
+
+$$ f(x) = \int \frac{2x^2+4x+6}{x-2} $$
+
+
 
 ### GitHub Gist Embed
 
