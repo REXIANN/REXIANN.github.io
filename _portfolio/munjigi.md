@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Just DDA IT
+title: MUNJIGI
 img: "assets/img/munjigi/logo.png"
 date: October 2020
 ---
