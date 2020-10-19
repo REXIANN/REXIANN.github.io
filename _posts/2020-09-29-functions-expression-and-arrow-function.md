@@ -13,7 +13,7 @@ excerpt_separator: <!--more-->
 
 절차지형 언어의 경우 함수나 변수가 선언되는 위치가 굉장히 중요하다.
 
-자바스크립트는 class가 추가되어서 OOP가 아니나 순수한 OOP는 아니고 prototype를 활용한 가짜 OOP이다.
+자바스크립트는 class가 추가되어서 OOP라고 할 수 있지만 순수한 OOP는 아니고 prototype를 활용한 가짜 OOP이다.
 
 자바스크립트 또한 절차지향언어의 하나이다. 따라서 sub-programing이 중요하다.
 
