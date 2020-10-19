@@ -189,7 +189,8 @@ console.log(rectangle instanceof Rectangle) // true
 console.log(triangle instanceof Rectangle) // false
 console.log(triangle instanceof Triangle) // true
 console.log(triangle instanceof Shape) // true
-console.log(triangle instanceof Object) // true, 자바스크립트에서 만든 모든 오브젝트는 오브젝트 클래스를 자동으로 상속받는다. cmd+click으로 오브젝트가 정의된 부분으로 이동할 수 있다!
+console.log(triangle instanceof Object) // true 
+// 자바스크립트에서 만든 모든 오브젝트는 오브젝트 클래스를 자동으로 상속받는다. 
+// cmd+click으로 오브젝트가 정의된 부분으로 이동할 수 있다!
 ```
 
-## 

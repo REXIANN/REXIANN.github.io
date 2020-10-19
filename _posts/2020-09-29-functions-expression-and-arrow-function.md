@@ -117,9 +117,9 @@ function upgradeUser(user) {
 
 `const print = function () {}`
 
-함수의 이름이 없이 필요한 부분만 작성하므로 anonymous function이라고도 한다.
-
-만일 이름을 붙인다면 named function이라고 부른다.
+* 변수에 함수를 할당하는 형태로 쓴다.
+* 함수의 이름이 없이 필요한 부분만 작성하므로 anonymous function이라고도 한다.
+* 만일 이름을 붙인다면 named function이라고 부른다.
 
 ```javascript
 const print = function () { console.log('print') }
@@ -156,11 +156,45 @@ randomQuiz('correct', printYes, printNo) // 'No!'
 
 ## 화살표함수
 
-화살표 함수는 익명함수이다
+ `const arrowFunction = () => {}`
+
+* 화살표 함수는 익명함수이다.
+* ES6에 추가된 기능이다.
+* 다른 함수와 다르게 화살표 함수는 `this` 를 가지지 않는다. (global한 this를 쓰지 않고 블록 스코프를 따른다)
+
+기본구문
+
+```javascript
+const arrowFunction = (param1, param2) => { statements } // statement를 실행할 때
+const arrowFunction = (param1, param2) => { return expression } // 값을 반환할 때
+const arrowFunction = (param1, param2) => expression  // 바로 위의 함수와 같은 기능을 한다
+
+// 매개변수가 하나뿐인 경우 괄호의 생략이 가능하다
+const arrowFunction = (param1) => { statements }
+const arrowFunction = param1 => { statements }
+
+// 매개변수가 없더라고 괄호가 필요하다
+const arrowFunction = () => { statements }
+
+// 객체 리터럴을 반환하는 경우 함수 본문(body)을 괄호 속에 넣어야 한다.
+const arrowFunction = () => ({ key: 'value' }) // O
+// 괄호가 없으면 {} 안에 있는 내용은 해석할 '문장'으로 취급한다. 주의!
+const arrowFunction = () => { key: 'value' } // X
+
+// 기본매개변수와 나머지매개변수를 지원한다
+const arrowFunction = (param1, ...arr) => { statement }
+const arrowFunction = (param1, param2 = 'defaultValue') => { statement }
+
+```
+
+
+
+다음과 같이 활용할 수 있다.
 
 ```javascript
 const simplePrint = function () { console.log('simple print') }
 const simplePrint = () => console.log('simple print')
+// 위의 두 표현식은 동일한 기능을 한다.
 
 const add = (a, b) => a + b;
 const multiply = (a, b) => {
