@@ -1,4 +1,4 @@
-# Type on Strap 🎨
+# Welcome to my REXIANN's web page 🖥
 
 [![Build Status](https://travis-ci.org/sylhare/Type-on-Strap.svg?branch=master)](https://travis-ci.org/sylhare/Type-on-Strap)
 [![Gem Version](https://badge.fury.io/rb/type-on-strap.svg)](https://badge.fury.io/rb/type-on-strap)
@@ -6,10 +6,10 @@
 
 [![Default Type on Strap blog](https://github.com/Sylhare/Type-on-Strap/blob/master/screenshot.png?raw=true)](https://sylhare.github.io/Type-on-Strap/)
 
-A free and open-source [Jekyll](https://jekyllrb.com) theme. Based on Rohan Chandra [type-theme](https://github.com/rohanchandra/type-theme) packed with extra features and easily cusomizable:
+A free and open-source [Jekyll](https://jekyllrb.com) theme.
 
-* Responsive design on all devices (🖥, 💻, 📱, ...)
-* Portfolio 🗂, Gallery 🖼 pages for your projects
+* Responsive design on all devices (🖥,  💻, 📱, ...)
+* Portfolio 🗂, Gallery 🖼 pages included.
 * Tags compatibility 🏷
 * Handle Bootstrap'ed pages: [Get Bootstrap](http://getbootstrap.com/)
 * 🔎 Search feature: [Simple-Jekyll-Search](https://github.com/christian-fei/Simple-Jekyll-Search)
