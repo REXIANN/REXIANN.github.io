@@ -1,10 +1,20 @@
-# 11.비동기 처리의 시작, 콜백 이해하기.
+---
+layout: post
+title: "11.비동기 처리의 시작, 콜백 이해하기."
+tags: [javascript, JSON, AJAX, XML, XHR]
+excerpt_separator: <!--more-->
+
+
+
+---
 
 ## Synchronous VS Asynchronous
 
 자바스크립트는 synchronous 하다. 그 말은 호이스팅이 된 이후부터 코드는 우리가 작성한 순서에 따라 동기적으로 하나 하나 실행된다는 의미이다. 정해진 순서에 맞게 코드가 실행되는 것이라고 이해해도 좋다. 
 
 (호이스팅이란? 변수 var와 함수선언식이 자동적으로 제일 위로 끌어올려져서(hoisting) 선언되는 것!) 
+
+<!--more-->
 
 ```javascript
 console.log(1);
