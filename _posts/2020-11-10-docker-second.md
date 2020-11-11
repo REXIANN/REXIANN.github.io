@@ -1,8 +1,16 @@
-# Docker(2)
+---
+layout: post
+title: "Docker(2)"
+tags: [docker, dockerfile, dockerfile commands]
+excerpt_separator: <!--more-->
+
+---
 
 ## Dockerfile로 이미지 만들기
 
 도커 이미지를 추가하는 방법은 크게 세 가지가 있다. 먼저 `pull`을 사용해 미리 만들어져 있는 이미지를 가져오는 방법이 있다. 두번째 방법은 컨테이너의 변경사항으로부터 이미지를 만드는 방법이다. 세번째는 `Dockerfile`을 빌드하는 방법이다. `Dockerfile`은 도커만의 특별한 DSL로 이미지를 정의하는 파일이다. 
+
+<!--more-->
 
 ```bash
 $ docker build -t ubuntu:{file-name}

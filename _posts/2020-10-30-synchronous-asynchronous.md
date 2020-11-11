@@ -3,9 +3,6 @@ layout: post
 title: "11.비동기 처리의 시작, 콜백 이해하기."
 tags: [javascript, Asynchronous, Synchronous, CallBack, CallBack Hell]
 excerpt_separator: <!--more-->
-
-
-
 ---
 
 ## Synchronous VS Asynchronous
