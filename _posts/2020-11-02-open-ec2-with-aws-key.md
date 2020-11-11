@@ -34,7 +34,7 @@ Welcome to Ubuntu 18.04.1 LTS (GNU/Linux 4.15.0-1021-aws x86_64)
 
   System load:  0.0                Processes:           116
   Usage of /:   0.7% of 310.15GB   Users logged in:     0
-  Memory usage: 2%                 IP address for eth0: 172.26.13.183
+  Memory usage: 2%                 IP address for eth0: 172.0.0.0
   Swap usage:   0%
 ```
 
