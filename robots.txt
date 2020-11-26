@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://rexiann.github.io/sitemap.xml
