@@ -4,7 +4,6 @@ title: "BDD와 TDD"
 tags: [test case, BDD, TDD]
 excerpt_separator: <!--more-->
 
-
 ---
 
 if(kakao) 2020 의 강연을 듣고 정리해 보았습니다.
