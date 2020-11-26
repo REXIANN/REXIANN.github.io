@@ -113,3 +113,67 @@ URL에는 아까 위에서 기억하라고 했던 우리의 아이템 URL 그리
 성공했다면 다음과 같은 메시지를 볼 수 있다.
 
 ![related_images/Screen_Shot_2020-11-26_at_5.37.36_PM.png](/assets/img/posts/2020-11-25-connect-jenkins-and-gitlab-using-docker/Screen_Shot_2020-11-26_at_5.37.36_PM.png)
+
+
+
+## 푸시 이벤트를 통해 가져온 코드를 빌드 및 배포
+
+생성된 아이템의 소스 코드 관리 탭으로 이동해야 한다. 젠킨스의 메인 화면에서 해당 아이템의 configure를 클릭하자
+
+![image/Screen_Shot_2020-11-26_at_6.31.38_PM.png](/assets/img/posts/2020-11-25-connect-jenkins-and-gitlab-using-docker/Screen_Shot_2020-11-26_at_6.31.38_PM.png)
+
+소스코드 관리 도구로 Git을 선택하면 다음과 같이 탭이 생긴다. Repository URL 에는 git clone에 사용되는 레포지토리의 주소를 넣는다. 깃랩의 해당 레포지토리에서 손쉽게 복사해 올 수 있다. Credentials에는 아직 설정된 게 없기 때문에 Add 를 클릭한다.
+
+![image/Screen_Shot_2020-11-26_at_6.33.09_PM.png](/assets/img/posts/2020-11-25-connect-jenkins-and-gitlab-using-docker/Screen_Shot_2020-11-26_at_6.33.09_PM.png)
+
+kind는 username with password로 둔다. username에 깃랩 로그인 시 사용되는 이메일 주소, password에 깃랩 패스워드를 입력하고 Add를 눌러 나의 정보를 저장한뒤 Credentials에서 선택하면 된다.
+
+![image/Screen_Shot_2020-11-26_at_6.37.10_PM.png](/assets/img/posts/2020-11-25-connect-jenkins-and-gitlab-using-docker/Screen_Shot_2020-11-26_at_6.37.10_PM.png)
+
+하단의 Apply 버튼을 눌러 설정을 저장한 뒤 Build 탭으로 이동하자.
+
+![image/Screen_Shot_2020-11-26_at_6.41.12_PM.png](/assets/img/posts/2020-11-25-connect-jenkins-and-gitlab-using-docker/Screen_Shot_2020-11-26_at_6.41.12_PM.png)
+
+Execute shell을 누르자
+
+![image/Screen_Shot_2020-11-26_at_6.42.47_PM.png](/assets/img/posts/2020-11-25-connect-jenkins-and-gitlab-using-docker/Screen_Shot_2020-11-26_at_6.42.47_PM.png)
+
+우선 실행되는지만 알아보기 위해 간단한 명령어 하나만 쳐놓고 패스
+
+![image/Screen_Shot_2020-11-26_at_6.43.57_PM.png](/assets/img/posts/2020-11-25-connect-jenkins-and-gitlab-using-docker/Screen_Shot_2020-11-26_at_6.43.57_PM.png)
+
+## 빌드 이후 배포 과정
+
+이제 빌드 후의 작업을 설정하자. 먼저 젠킨스가 SSH서버(나의 경우에는 AWS EC2)를 인식하기 위한 설정이 필요하다. 이걸 위해 아까 publish over SSH 플러그인 을 설치한 것이다. 이제 사용하러 가자. Manage Jenkins의 Configure System으로 이동하자.
+
+![image/Screen_Shot_2020-11-26_at_6.45.59_PM.png](/assets/img/posts/2020-11-25-connect-jenkins-and-gitlab-using-docker/Screen_Shot_2020-11-26_at_6.45.59_PM.png)
+
+밑으로 주욱 내리다 보면 Publish over SSH 항목이 있다. Key부분에 AWS EC2에 사용되는 `.pem` 파일의 내용을 그대로 복사해서 넣으면 된다. 그 뒤 SSH Servers의 Add 버튼을 클릭하여 서버 접속 정보를 넣으면 된다.
+
+![image/Screen_Shot_2020-11-26_at_6.48.57_PM.png](/assets/img/posts/2020-11-25-connect-jenkins-and-gitlab-using-docker/Screen_Shot_2020-11-26_at_6.48.57_PM.png)
+
+정보를 입력한 뒤 Test Configuration 버튼을 눌러 접속테스트를 해보자. 테스트 버튼 밑에  Success라는 메시지가 뜨면 성공한 것이므로 저장 버튼을 눌러서 빠져나온다. 저장버튼 안누르고 뒤로가기 누르면 안된다.
+
+![image/Screen_Shot_2020-11-26_at_6.49.42_PM.png](/assets/img/posts/2020-11-25-connect-jenkins-and-gitlab-using-docker/Screen_Shot_2020-11-26_at_6.49.42_PM.png)
+
+이제 다시 우리의 아이템 configure 탭으로 이동하여 Build스텝을 마저 정해야 한다. 조금 귀찮지만 다시 우리의 아이템의 configure 세션으로 이동하자. 이번엔 Send files or execute commands over SSH를 눌러서 추가적인 단계를 구성한다.
+
+![image/Screen_Shot_2020-11-26_at_6.51.47_PM.png](/assets/img/posts/2020-11-25-connect-jenkins-and-gitlab-using-docker/Screen_Shot_2020-11-26_at_6.51.47_PM.png)
+
+누르면 아까 우리가 설정했던 SSH 서버가 등장한다. 아까 Save버튼 안누르고 그냥 오면 이게 안보인다... 저장버튼이 이상하게 왼쪽하단에 고정된 방식으로 있는데 잘 적응하도록 하자. Exec command 에다가 빌드 명령 (ex: `npm run build`)를 입력해도 된다. 나는 우선 테스트를 위해 `docker ps` 를 써봤다. `*.*` 의 의미는 git clone 한 모든 파일들을 SSH 서버로 이동시키라는 뜻이고 `docker ps` 를 SSH 서버상에서 실행하고 마친다는 의미이다.
+
+![image/Screen_Shot_2020-11-26_at_6.55.19_PM.png](/assets/img/posts/2020-11-25-connect-jenkins-and-gitlab-using-docker/Screen_Shot_2020-11-26_at_6.55.19_PM.png)
+
+이제 완료되었다! 테스트를 위해 깃랩으로 돌아가서 아까 우리가 연결했던 웹훅에 있는 Test push events를 발동시켜보자.
+
+![image/Screen_Shot_2020-11-26_at_6.57.37_PM.png](/assets/img/posts/2020-11-25-connect-jenkins-and-gitlab-using-docker/Screen_Shot_2020-11-26_at_6.57.37_PM.png)
+
+왼쪽 하단의 build history에 새로운 빌드가 실행되는 걸 볼 수 있다.
+
+![image/Screen_Shot_2020-11-26_at_6.59.29_PM.png](/assets/img/posts/2020-11-25-connect-jenkins-and-gitlab-using-docker/Screen_Shot_2020-11-26_at_6.59.29_PM.png)
+
+나는 제대로 명령어가 실행되는지 보기 위해 미리 SSH를 통해 우분투 서버에 접속해 있었다. 굳이 우분투 서버에 접속하지 않았더라도 해당 빌드를 눌러서 console output 에서도 확인 가능하니  제대로 실행되었는지 확인해보자
+
+![image/Screen_Shot_2020-11-26_at_7.05.42_PM.png](/assets/img/posts/2020-11-25-connect-jenkins-and-gitlab-using-docker/Screen_Shot_2020-11-26_at_7.05.42_PM.png)
+
+그럼 끝!
