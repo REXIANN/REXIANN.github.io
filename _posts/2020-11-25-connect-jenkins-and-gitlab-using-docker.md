@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "도커로 젠킨스 설치 및 깃랩과 연동"
-tags: [test case, BDD, TDD]
+tags: [docker, jenkins, gitlab]
 excerpt_separator: <!--more-->
 
 
