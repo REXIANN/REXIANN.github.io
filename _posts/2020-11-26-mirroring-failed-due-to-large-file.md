@@ -3,6 +3,9 @@ layout: post
 title: "100메가가 넘는 파일로 인해 gitlab의 저장소를 github에 미러링이 불가능 할때"
 tags: [mirroring, git lfs, bfg, github, gitlab]
 excerpt_separator: <!--more-->
+sitemap :
+  changefreq : daily
+  priority : 1.0
 
 ---
 
