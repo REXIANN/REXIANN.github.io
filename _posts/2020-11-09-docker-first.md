@@ -6,16 +6,15 @@ excerpt_separator: <!--more-->
 
 ---
 
+## 일단 Docker 설치부터 하자
 
-## 도커 설치
+<!--more-->
 
 ```bash
 curl -s https://get.docker.com | sudo sh
 ```
 
 설치하고 나면 확인해보자
-
-<!--more-->
 
 ```bash
 $ docker -v
