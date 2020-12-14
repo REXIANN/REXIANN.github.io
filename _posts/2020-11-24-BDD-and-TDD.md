@@ -8,11 +8,13 @@ excerpt_separator: <!--more-->
 
 if(kakao) 2020 의 강연을 듣고 정리해 보았습니다.
 
+<!--more-->
+
 # kotest가 있다면  TDD 묻고 BDD로 가!
 
 > BDD(Behavior Driven Development)와 TDD(Test Driven Development)를 비교하고 BDD와 TDD를 통해 얻는 장점을 이야기해봅니다. 그리고, 예제를 통해 BDD를 적용하는 법을 살펴보고 BDD와 TDD를 kotlin project에서 쉽게 적용할 수 있도록 도와주는  kotest와 주변 라이브러리를 소개합니다.
 
-<!--more-->
+
 
 ## TDD와 BDD
 

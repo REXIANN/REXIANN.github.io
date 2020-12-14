@@ -7,15 +7,15 @@ excerpt_separator: <!--more-->
 
 ---
 
-<!--more-->
 
-## 젠킨스 설치
 
 먼저 젠킨스 이미지를 내려받는다
 
 ```bash
 $ sudo docker pull jenkins/jenkins:lts
 ```
+
+<!--more-->
 
 그 후 젠킨스 이미지를 실행한다(컨테이너화)
 
