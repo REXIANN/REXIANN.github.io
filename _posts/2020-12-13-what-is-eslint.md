@@ -9,9 +9,11 @@ excerpt_separator: <!--more-->
 
 ## ESLint란 무엇일까?
 
-한마디로 '작성한 JS코드가 EcmaScript재단에서 명시한 Specifiaction에 부합하는지 검사해주는 툴' 이라고 할 수 있다. ESLint는 문자 그대로 ES와 Lint를 합친 것이다. ES는 EcmaScript로서 Ecma재단에서 만든 Script Specification이라 할 수 있고, Lint는 에러가 있는 코드에 표시를 달아주는 것을 의미한다. 나는 이미 Pylint를 사용해본 경험이 있어 ESLint를 보자마자 무엇인지 대충 감을 잡을 수 있었다. 
+한마디로 '작성한 JS코드가 EcmaScript재단에서 명시한 Specifiaction에 부합하는지 검사해주는 툴' 이라고 할 수 있다. ESLint는 문자 그대로 ES와 Lint를 합친 것이다. 
 
 <!--more-->
+
+ES는 EcmaScript로서 Ecma재단에서 만든 Script Specification이라 할 수 있고, Lint는 에러가 있는 코드에 표시를 달아주는 것을 의미한다. 나는 이미 Pylint를 사용해본 경험이 있어 ESLint를 보자마자 무엇인지 대충 감을 잡을 수 있었다. 
 
 ESLint는 코드에 특정 스타일과 규칙을 적용해서 문제를 사전에 찾고 패턴을 적용시킬 수 있는 정적 분석 툴로 분류 한다. 기본적인 기능은 에러도출이나 전반적인 코딩스타일(tab설정, `;` 여부, usingSpaces 등)을 직접 정할 수도 있다. 자신의 스타일과 규칙을 정해서 사용할 수도 있고 대기업에서 사용하는 스타일과 규칙이 정해준 rule을 적용시킬 수도 있다. 
 
