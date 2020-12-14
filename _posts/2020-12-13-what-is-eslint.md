@@ -76,7 +76,7 @@ Installing eslint-plugin-vue@latest
 
 몇가지 설정을 해 주고 나면 .eslintrc.json 파일이 생성된 것을 볼 수 있다.
 
-!imgScreen_Shot_2020-12-14_at_3.01.26_PM.png](/assets/img/posts/2020-12-13-what-is-eslint/Screen_Shot_2020-12-14_at_3.01.26_PM.png)
+![img//Screen_Shot_2020-12-14_at_3.01.26_PM.png](/assets/img/posts/2020-12-13-what-is-eslint/Screen_Shot_2020-12-14_at_3.01.26_PM.png)
 
 - `env` : 사용 환경을 의미한다.
 - `extends` : 사용할 확장 기능에 대해 명시하는 부분. 보통 airbnb-base나 prettier를 추가하여 사용하는 사람들을 볼 수 있었다.
@@ -140,15 +140,15 @@ Installing eslint-plugin-vue@latest
 
 ## 사용해보자
 
-먼저 두가지 규칙을 추가해서 돌려보기로 했다. `"no-mixed-spaces-and-tabs"` 와 `"no-multiple-empty-lines"` 두가지 이다. 각 속성은 "스페이스와 탭을 혼용하지 말 것", "한줄 이상의 공백을 두지 말 것" 을 의미하며 둘다 warning으로 설정했다.
+먼저 두가지 규칙을 추가해서 돌려보기로 했다. `"no-mixed-spaces-and-tabs"` 와 `"no-multiple-empty-lines"` 두가지 이다. 각 속성은 "스페이스와 탭을 혼용하지 말 것", "태그간 한 줄 이상, 또는 불필요한 공백을 두지 말 것" 을 의미하며 둘다 warning으로 설정했다.
 
-!imgScreen_Shot_2020-12-14_at_3.03.32_PM.png](/assets/img/posts/2020-12-13-what-is-eslint/Screen_Shot_2020-12-14_at_3.03.32_PM.png)
+![img//Screen_Shot_2020-12-14_at_3.03.32_PM.png](/assets/img/posts/2020-12-13-what-is-eslint/Screen_Shot_2020-12-14_at_3.03.32_PM.png)
 
 수정 전과 수정 후의 파일 모습이다. 두칸 이상 띄워진 부분은 자동적으로 ESLint가 수정해준다.
 
-!imgScreen_Shot_2020-12-14_at_3.02.53_PM.png](/assets/img/posts/2020-12-13-what-is-eslint/Screen_Shot_2020-12-14_at_3.02.53_PM.png)
+![img//Screen_Shot_2020-12-14_at_3.02.53_PM.png](/assets/img/posts/2020-12-13-what-is-eslint/Screen_Shot_2020-12-14_at_3.02.53_PM.png)
 
-!imgScreen_Shot_2020-12-14_at_3.04.40_PM.png](/assets/img/posts/2020-12-13-what-is-eslint/Screen_Shot_2020-12-14_at_3.04.40_PM.png)
+![img//Screen_Shot_2020-12-14_at_3.04.40_PM.png](/assets/img/posts/2020-12-13-what-is-eslint/Screen_Shot_2020-12-14_at_3.04.40_PM.png)
 
 간략하게 몇 개의 좋은 Rules를 소개한다.
 
