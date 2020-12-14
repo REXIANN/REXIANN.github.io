@@ -8,17 +8,17 @@ excerpt_separator: <!--more-->
 
 
 
-자바스크립트 비동기 처리의 마지막, async와 await에 대하여.
+자바스크립트 비동기 처리의 마지막, `async`와 `await`에 대하여.
 
 <!--more-->
 
-async&await은 Promise를 좀 더 **간단하고 간결하고 동기적으로 실행되는 것 처럼 보이게** 만들어준다. Promise의 .then의 체이닝 대신 async&await 을 사용하면 동기식 처럼 간단하게 코드를 작성 가능하다.
+`async`&`await`은 `Promise`를 좀 더 **간단하고 간결하고 동기적으로 실행되는 것 처럼 보이게** 만들어준다. `Promise`의 `.then` 체이닝 대신 `async`&`await` 을 사용하면 동기식 처럼 간단하게 코드를 작성 가능하다.
 
-async&await은 완전히 새로운 개념이 아니라 기존의 Promise개념 위에 조금 더 간편한 API를 제공하는 것이다. 이렇게 기존에 존재하는 것을 감싸서 새로운 기능을 더 제공하는 것을 syntactic sugar(문법적 설탕)이라고 한다.
+`async`&`await`은 완전히 새로운 개념이 아니라 기존의 `Promise`개념 위에 조금 더 간편한 API를 제공하는 것이다. 이렇게 기존에 존재하는 것을 감싸서 새로운 기능을 더 제공하는 것을 syntactic sugar(문법적 설탕)이라고 한다.
 
 또다른 syntactic sugar로는 클래스(Class)가 있다. 클래스는 프로토타입을 베이스로 하여 그 위에 덧붙여진, 그럴싸하게 보이는 녀석이다!
 
-async&await은 Promise를 깔끔하게 사용할수 있는 방법이다. 그렇다고 해서 Promise가 나쁘거나 async await 으로 무조건 변환해서 사용해야 하는 것은 아니다. Promise와 async&await을 상황에 맞게 적절하게 사용하는 것이 중요하다.
+`async`&`await`은 `Promise`를 깔끔하게 사용할수 있는 방법이다. 그렇다고 해서` Promise`가 나쁘거나 `async`&`await` 으로 무조건 변환해서 사용해야 하는 것은 아니다. `Promise`와 `async`&`await`을 상황에 맞게 적절하게 사용하는 것이 중요하다.
 
 ## 1. async
 
@@ -34,7 +34,7 @@ const user = fetchUser(); // 이 경우 여기서 10초가 소요된다.
 console.log(user); 
 ```
 
-유저 정보를 가져오는 동안(즉, fetchUser가 콜스택에 있는 동안) 브라우저는 아무 일도 하지 못하고 기다려야 한다. 지난 시간에는 함수의 반환값을 Promise 오브젝트로 만들어 주었었다. 이 Promise안에는 resolve, reject라는 콜백함수를 받는 executor라는 콜백함수가 위치하여 코드 안에 있는 작업들이 비동기적으로 사용되게 한다. 그리고 resolve와 reject를 사용하지 않고 실행하면 Promise의 상태가 pending으로 남아있는 것을 볼 수 있다. 
+유저 정보를 가져오는 동안(즉, `fetchUser`가 콜스택에 있는 동안) 브라우저는 아무 일도 하지 못하고 기다려야 한다. 지난 시간에는 함수의 반환값을 `Promise` 오브젝트로 만들어 주었었다. 이 `Promise`안에는 `resolve`, `reject`라는 콜백함수를 받는 `executor`라는 콜백함수가 위치하여 코드 안에 있는 작업들이 비동기적으로 사용되게 한다. 그리고 `resolve`와 `reject`를 사용하지 않고 실행하면 `Promise`의 상태가 `pending`으로 남아있는 것을 볼 수 있다. 
 
 ```jsx
 function fetchUser() {
@@ -48,7 +48,7 @@ const user = fetchUser();
 user.then(console.log);
 ```
 
-Promise를 사용하지 않고도 함수를 비동기적으로 만드는 방법이 있다. 바로 함수 키워드 앞에 async 키워드를 붙여주는 것! 키워드를 작성하면 자동적으로 함수 안의 코드블럭들이 Promise로 변환이 된다. 다시 말해 fetchUser는 이제 Promise객체를 반환한다.
+`Promise`를 사용하지 않고도 함수를 비동기적으로 만드는 방법이 있다. 바로 함수 키워드 앞에 `async` 키워드를 붙여주는 것! 키워드를 작성하면 자동적으로 함수 안의 코드블럭들이 `Promise`로 변환이 된다. 다시 말해 `fetchUser`는 이제 `Promise`객체를 반환한다.
 
 ```jsx
 async function fetchUser() {
@@ -67,7 +67,7 @@ __proto__: Promise
 
 ## 2. await
 
-await이라는 키워드는 async 가 붙은 함수 안에서만 사용할 수 있다. await 이라는 키워드를 쓰면 해당 키워드가 있는 함수의 부분이 완료될 때 까지 기다린다.
+`await`이라는 키워드는 `async` 가 붙은 함수 안에서만 사용할 수 있다. `await` 이라는 키워드를 쓰면 해당 키워드가 있는 함수의 부분이 완료될 때 까지 기다린다.
 
 예제를 통해 알아보자. 다음과 같이 사과와 바나나를 얻어오는 비동기 함수 두개가 있다. 과일 하나를 받아오려면 3초를 기다려야 한다.
 
@@ -87,7 +87,7 @@ async function getBanana() {
 }
 ```
 
-이렇게 짜면 사수한테 맞는다고 한다. 조심하자. 
+이렇게 짜면 사수한테 맞는다고 한다. 조심하자. ~~ 콜!백!지!옥! ~~
 
 ```jsx
 function pickFruits() {
@@ -98,7 +98,7 @@ function pickFruits() {
 pickFruits().then(console.log);
 ```
 
-async 기능을 활용하면 간단하게 만들 수 있다. ~~뭐야 너무 깔끔해 멋있어....~~
+`async` 기능을 활용하면 간단하게 만들 수 있다. ~~뭐야 너무 깔끔해 멋있어....~~
 
 ```jsx
 async function pickFruits() {
@@ -124,7 +124,7 @@ async function pickFruits() {
 
 ## 3. useful Promise APIs
 
-이번에는 Promise에 있는 유용한 기능을 사용하여 보자. Promise에는 .all이라는 api를 사용하면 Promise 배열들 전달해 모든 Promise의 결과가 받아지길 기다렸다가 받아진 배열을 전달해준다. 마찬가지로 코드를 통해 빠르게 이해해보자.
+이번에는 `Promise`에 있는 유용한 기능을 사용하여 보자. `Promise`에는 `.all`이라는 api를 사용하면 `Promise` 배열들 전달해 모든 `Promise`의 결과가 받아지길 기다렸다가 받아진 배열을 전달해준다. 마찬가지로 코드를 통해 빠르게 이해해보자.
 
 ```jsx
 function pickAllFruits() {
@@ -133,7 +133,7 @@ function pickAllFruits() {
 pickAllFruits().then(console.log); // apple and banana
 ```
 
-혹은 어떤 과일이든 상관없이 먼저 딸 수 있는 한 개의 과일만 필요하다고 할때는 Promise에 있는 .race라는 api를 사용할 수 있다. .race를 사용하면 가장 먼저 전달되는 값 하나만 전달이 된다. 말 그대로 race, 경주를 시키는 것 같다!
+혹은 어떤 과일이든 상관없이 먼저 딸 수 있는 한 개의 과일만 필요하다고 할때는 `Promise`에 있는 `.race`라는 api를 사용할 수 있다. `.race`를 사용하면 가장 먼저 전달되는 값 하나만 전달이 된다. 말 그대로 race, 경주를 시키는 것 같다!
 
 ```jsx
 function pickOnlyOne() {
