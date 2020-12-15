@@ -179,7 +179,7 @@ printManager(person2) // undefined
 
 ~~null은 심지어 오브젝트 타입...~~
 
-예제를 같이 보자. name이 존재할 경우 userName은 name이 되고, 만일 name이 없다면 'Guest'로 userName을 지정해주려고 한다. 하지만 이 경우에는 사용자가 이름을 빈문자열 `''` 이나 숫자 0으로 채운다면 똑같이 Guest라는 이름을 사용해버린다. 
+예제를 같이 보자. `name`이 존재할 경우 `userName`은 `name`이 되고, 만일 `name`이 없다면 `'Guest'`로 `userName`을 지정해주려고 한다. 하지만 이 경우에는 사용자가 이름을 빈문자열 `''` 이나 숫자 0으로 채운다면 똑같이 `Guest`라는 이름을 사용해버린다. 
 
 ```jsx
 const name = null;
@@ -199,7 +199,7 @@ const userName = name || 'Guest'
 console.log(userName); // Guest
 ```
 
-이를 방지하기 위해 Nullish Coalescing(`??`)을 사용해주면 NaN, '', 0에 대해서 암묵적 형변환이 일어나지 않고 그대로 출력을 해준다. 나머지 두개인 null과 undefined는 그대로 false가 유지된다. 
+이를 방지하기 위해 Nullish Coalescing(기호: `??`)을 사용해주면 `NaN`, `''`, `0`에 대해서 암묵적 형변환이 일어나지 않고 그대로 출력을 해준다. 나머지 두개인 `null`과 `undefined`는 그대로 `false`가 유지된다. 
 
 ```jsx
 const name = null;
