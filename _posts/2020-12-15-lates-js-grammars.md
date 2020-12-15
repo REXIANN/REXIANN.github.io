@@ -36,7 +36,7 @@ const user = {
 
 ### Destructuring assignment
 
-오브젝트의 키와 값에 접근하기 위해서는 기존에 .을 사용해야 했었다. 하지만 Destructuring을 사용하면 오브젝트의 키에 할당된 값이 오브젝트의 키와 동일한 이름의 변수에 차례대로 적용되는 것을 볼 수 있다. 만일 이름을 바꾸고 싶다면 {}안에서 새로운 이름을 지정하면 된다. 나도 처음에는 이해가 잘 안되서 힘들었다. 예제를 우선 보자
+오브젝트의 키와 값에 접근하기 위해서는 기존에 .을 사용해야 했었다. 하지만 Destructuring을 사용하면 오브젝트의 키에 할당된 값이 오브젝트의 키와 동일한 이름의 변수에 차례대로 적용되는 것을 볼 수 있다. 만일 이름을 바꾸고 싶다면 `{}`안에서 새로운 이름을 지정하면 된다. 나도 처음에는 이해가 잘 안되서 힘들었다. 예제를 우선 보자
 
 ```jsx
 const user = {
@@ -69,7 +69,7 @@ console.log(firstAnimal, secondAnimal); // 'dog', 'cat'
 
 ### Spread syntax
 
-오브젝트를 담고 있는 배열을 복사하기 위해서는 어떻게 해야 할까? 기존의 방법으로는 배열에 .forEach나 .map을 사용했었다. 그러나 이제는 `...` 를 사용하여 배열을 복사해 올 수 있다. 
+오브젝트를 담고 있는 배열을 복사하기 위해서는 어떻게 해야 할까? 기존의 방법으로는 배열에 `.forEach`나 `.map`을 사용했었다. 그러나 이제는 `...` 를 사용하여 배열을 복사해 올 수 있다. 
 
 ```jsx
 const obj1 = { key: 'firstKey' }
@@ -123,13 +123,13 @@ console.log(howAreYou) // 'fine'
 
 ### Template Literals
 
-내가 배울때에는 백틱 ``` 이라고 배웠다. 문자열 안에 변수를 넣어서 하나의 문자열로 편하게 만들 수 있다. URI를 구성하거나 숨겨놓은 API Key를 가지고 와서 request를 보낼때 많이 사용한다.
+내가 배울때에는 백틱 (\`) 이라고 배웠다. 문자열 안에 변수를 넣어서 하나의 문자열로 편하게 만들 수 있다. URI를 구성하거나 숨겨놓은 API Key를 가지고 와서 request를 보낼때 많이 사용한다.
 
 ```jsx
 const API_KEY = '1234';
-const URL = 'http://hello.world.io/'
+const URL = 'http://send.request.to/'
 
-const req = `${URL}${API_KEY}` // 'http://hello.world.io/1234'
+const req = `${URL}${API_KEY}` // 'http://send.request.to/1234'
  
 ```
 
@@ -171,11 +171,11 @@ printManager(person2) // undefined
 
 ### Nullish coalescing operator
 
-이것을 이해하기 위해 우리는 falsy의 개념에 대해 잘 알아야한다. JS에서 공식적으로 제공되는 false 뿐만 아니라 Boolean 타입으로 암묵적 형변환이 되었을 때 false를 가리키는 값이 6개가 있다. 
+이것을 이해하기 위해 우리는 `falsy`의 개념에 대해 잘 알아야한다. JS에서 공식적으로 제공되는 false 뿐만 아니라 Boolean 타입으로 암묵적 형변환이 되었을 때 false를 가리키는 값이 6개가 있다. 
 
-바로 false, '', 0, null, undefined, NaN 이다. 
+바로 `false`, `''`, `0`, `null`, `undefined`, `NaN`  이다. 
 
-~~근데 NaN은 왜 넘버 타입...~~  
+~~근데 Not a Number를 줄인 NaN은 왜 넘버 타입...~~  
 
 ~~null은 심지어 오브젝트 타입...~~
 
