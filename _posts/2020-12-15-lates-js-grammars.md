@@ -1,8 +1,15 @@
+---
+layout: post
+title: "JS 최신 문법 정리(ES6 ~ ES11)"
+tags: [javascript, es6, es11]
+excerpt_separator: <!--more-->
 
 
-# JS 최신 문법 정리(ES6 ~ ES11)
+---
 
-ES6이후로 추가된 많은 문법들은 IE에서는 적용되지 않기 때문에 Babel을 사용해야 한다.
+⚠️ES6이후로 추가된 많은 문법들은 IE에서는 적용되지 않기 때문에 Babel을 사용해야 함을 잊지말자!
+
+<!--more-->
 
 ## ES6의 기능들
 
