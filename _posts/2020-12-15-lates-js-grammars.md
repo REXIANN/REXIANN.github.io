@@ -1,3 +1,5 @@
+
+
 # JS 최신 문법 정리(ES6 ~ ES11)
 
 ES6이후로 추가된 많은 문법들은 IE에서는 적용되지 않기 때문에 Babel을 사용해야 한다.
@@ -212,4 +214,4 @@ console.log(userName); // 0
 
 암묵적 형변환을 활용한 유명한 개그를 마지막으로 포스트를 마친다
 
-![JS%20%E1%84%8E%E1%85%AC%E1%84%89%E1%85%B5%E1%86%AB%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%87%E1%85%A5%E1%86%B8%20%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%85%E1%85%B5(ES6%20~%20ES11)%2088cc94e88b4a4db2aea164bae837aa9f/Untitled.png](JS%20%E1%84%8E%E1%85%AC%E1%84%89%E1%85%B5%E1%86%AB%20%E1%84%86%E1%85%AE%E1%86%AB%E1%84%87%E1%85%A5%E1%86%B8%20%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%85%E1%85%B5(ES6%20~%20ES11)%2088cc94e88b4a4db2aea164bae837aa9f/Untitled.png)
+![img/Untitled.png](/assets/img/posts/2020-12-15-lates-js-grammars/Untitled.png)

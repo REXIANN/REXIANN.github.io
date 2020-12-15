@@ -4,7 +4,6 @@ title: "ESLint에 대해 알아보자"
 tags: [eslint, ecmascript, lint, vscode, eslintrc]
 excerpt_separator: <!--more-->
 
-
 ---
 
 ## ESLint란 무엇일까?
