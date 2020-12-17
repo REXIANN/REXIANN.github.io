@@ -141,15 +141,13 @@ Installing eslint-plugin-vue@latest
 
 ## 사용해보자
 
-먼저 두가지 규칙을 추가해서 돌려보기로 했다. `"no-mixed-spaces-and-tabs"` 와 `"no-multiple-empty-lines"` 두가지 이다. 각 속성은 "스페이스와 탭을 혼용하지 말 것", "태그간 한 줄 이상, 또는 불필요한 공백을 두지 말 것" 을 의미하며 둘다 warning으로 설정했다.
+먼저 두가지 규칙을 추가해서 돌려보기로 했다. `"no-mixed-spaces-and-tabs"` 와 `"no-multiple-empty-lines"`, `quotes:[error, double]` 세가지 이다. 각 속성은 "스페이스와 탭을 혼용하지 말 것", "태그간 한 줄 이상, 또는 불필요한 공백을 두지 말 것", "스트링은 무조건 `"` 을 사용할 것" 을 의미한다.
 
-![img//Screen_Shot_2020-12-14_at_3.03.32_PM.png](/assets/img/posts/2020-12-13-what-is-eslint/Screen_Shot_2020-12-14_at_3.03.32_PM.png)
+![img//Screen_Shot_2020-12-14_at_3.03.32_PM.png](/assets/img/posts/2020-12-13-what-is-eslint/Screen Shot 2020-12-17 at 3.46.33 PM.png)
 
-수정 전과 수정 후의 파일 모습이다. 두칸 이상 띄워진 부분은 자동적으로 ESLint가 수정해준다.
+적용된 모습이다. 이전에는 보지 못했던 더블쿼트를 사용하라는 에러를 ESLint가 내뿜고 있다.
 
-![img//Screen_Shot_2020-12-14_at_3.02.53_PM.png](/assets/img/posts/2020-12-13-what-is-eslint/Screen_Shot_2020-12-14_at_3.02.53_PM.png)
-
-![img//Screen_Shot_2020-12-14_at_3.04.40_PM.png](/assets/img/posts/2020-12-13-what-is-eslint/Screen_Shot_2020-12-14_at_3.04.40_PM.png)
+![img//Screen_Shot_2020-12-14_at_3.02.53_PM.png](/assets/img/posts/2020-12-13-what-is-eslint/Screen Shot 2020-12-17 at 3.48.41 PM.png)
 
 간략하게 몇 개의 좋은 Rules를 소개한다.
 
