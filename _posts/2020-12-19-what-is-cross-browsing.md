@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "크로스 브라우징에 대해"
-tags: [cross browsing, rendering, browser,MDN]
+tags: [cross browsing, rendering, browser, MDN]
 excerpt_separator: <!--more-->
 
 ---

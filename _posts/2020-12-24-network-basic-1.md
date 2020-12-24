@@ -1,6 +1,15 @@
-# 네트워크의 기초
+---
+layout: post
+title: "네트워크의 기초(1)"
+tags: [network, OSI, protocol, ethernet, MAC address]
+excerpt_separator: <!--more-->
+
+
+---
 
 데이터를 주고받는 근본적인 기술부터 이해하자
+
+<!--more-->
 
 모든 서버는 네트워크를 사용하여 데이터를 제공(전송)한다. 
 
