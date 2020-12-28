@@ -7,7 +7,7 @@ excerpt_separator: <!--more-->
 
 ---
 
-브라우저의 주소창에 `https://google.com` 을 입력하고 엔터가 누르면 당연하게도 구글 홈페이지가 나타난다. 그런데 어떻게?
+브라우저의 주소창에 `https://google.com` 을 입력하고 엔터를 누르면 당연하게도 구글 홈페이지가 나타난다. 그런데 어떻게?
 
 <!--more-->
 
@@ -45,7 +45,7 @@ Ex: https://google.com:443
 
 - https → 사용할 프로토콜
 - [google.com](http://google.com) → 요청할 URL
-- :443 → 포트번호
+- 443 → 포트번호
 
 ### 브라우저 캐시 확인
 
@@ -54,6 +54,8 @@ Ex: https://google.com:443
 해당 도메인 주소가 기록되어 있지 않다면 도메인 네임 서버에 해당 도메인의 IP주소를 요청한다.
 
 도메인 네임 서버도 또 다시 Root Name Server, Middle Name Server등에 요청하여 주소를 받아온다.
+
+아래의 그림은 HTTPS 프로토콜의 handshake가 일어나는 과정이다.
 
 ![img/Screen_Shot_2020-12-28_at_6.11.57_PM.png](/assets/img/posts/2020-12-28-what-happens-with-url/Screen_Shot_2020-12-28_at_6.11.57_PM.png)
 
