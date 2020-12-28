@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "HTTP와 REST API"
-tags: [HTTP, REST API, ]
+tags: [HTTP, REST API, collections, document]
 excerpt_separator: <!--more-->
 
 ---
@@ -20,8 +20,8 @@ HyperText Transfer Protocol의 약자로 주로 웹에서 사용되는 통신 �
 
 ### 요청메시지
 
-- 요청 내용 (ex: `GET [http://google.com](http://google.com) HTTP/1.1`)
-- 헤더 → (ex: `Accept-Language: en, Authorization: Token abcdefghijklmnop` )
+- 요청 내용 (ex: `GET http://google.com HTTP/1.1`)
+- 헤더 → (ex: `Accept-Language: en, Authorization: Token abcdefg123456` )
 - 빈줄
 - 메시지
 
@@ -66,6 +66,8 @@ Connection: close
 - 서버는 사용자를 식별할 수 없다(stateless) → http 통신 자체로는 사용자 식별이 불가능하다는 의미. 요청 헤더에 있는 쿠키로 판별하는 것은 추가적인 기술이다!
 
 ### 응답코드
+
+자주 보는 응답코드에 대해 간단히 정리하고 넘어가자
 
 - 2XX(Success): 성공. 데이터 전송이 성공적으로 이루어졌거나 이해되었거다 수락되었음
     - 200(OK): 오류 없이 전송 성공
