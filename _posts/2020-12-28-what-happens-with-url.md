@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "http://google.com을 주소창에 치면 무슨일이 일어날까?"
+title: "https://google.com을 주소창에 치면 무슨일이 일어날까?"
 tags: [URL, browser, IP address, DNS, rendering]
 excerpt_separator: <!--more-->
 
