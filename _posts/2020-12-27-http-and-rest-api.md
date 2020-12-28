@@ -4,13 +4,15 @@ title: "HTTP와 REST API"
 tags: [HTTP, REST API, ]
 excerpt_separator: <!--more-->
 
-
-
 ---
 
 ## HTTP
 
-HyperText Transfer Protocol의 약자로 주로 웹에서 사용되는 통신 규약 중 하나이다. 서버와 클라이언트와 요청과 응답을 주고받는 통신 규약(프로토콜)이다. 기본포트로 80번을 사용한다(포트를 80 또는 443 으로 지정하면 URL 뒤에 포트번호를 지정하지 않아도 접속된다).
+HyperText Transfer Protocol의 약자로 주로 웹에서 사용되는 통신 규약 중 하나이다. 
+
+<!--more-->
+
+서버와 클라이언트와 요청과 응답을 주고받는 통신 규약(프로토콜)이다. 기본포트로 80번을 사용한다(포트를 80 또는 443 으로 지정하면 URL 뒤에 포트번호를 지정하지 않아도 접속된다).
 
 요청은 URL로 보낸다.
 
@@ -18,8 +20,8 @@ HyperText Transfer Protocol의 약자로 주로 웹에서 사용되는 통신 �
 
 ### 요청메시지
 
-- 요청 내용 (ex: GET [http://google.com](http://google.com) HTTP/1.1)
-- 헤더 → (ex: Accept-Language: en, Authorization: Token abcdefghijklmnop )
+- 요청 내용 (ex: `GET [http://google.com](http://google.com) HTTP/1.1`)
+- 헤더 → (ex: `Accept-Language: en, Authorization: Token abcdefghijklmnop` )
 - 빈줄
 - 메시지
 
@@ -31,8 +33,8 @@ Authorization: Bearer UExBMDFUMDRQV1MwMnzpdvtYYNWMSJ7CL8h0zM6q6a9ntw
 
 ### 응답메시지
 
-- 상태표시행: 상태코드와 reason message를 포함한다 (ex: HTTP/1.1 200 OK)
-- 응답헤더필드 (ex: Date: Mon, 28 2020 15:30:43 GMT + 8)
+- 상태표시행: 상태코드와 reason message를 포함한다 (ex: `HTTP/1.1 200 OK`)
+- 응답헤더필드 (ex: `Date: Mon, 28 2020 15:30:43 GMT + 9`)
 - 빈줄
 - 메시지
 
