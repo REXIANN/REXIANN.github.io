@@ -43,9 +43,9 @@ excerpt_separator: <!--more-->
 
 Ex: https://google.com:443
 
-- https → 사용할 프로토콜
-- [google.com](http://google.com) → 요청할 URL
-- 443 → 포트번호
+- `https` → 사용할 프로토콜
+- `google.com` → 요청할 URL
+- `443` → 포트번호
 
 ### 브라우저 캐시 확인
 
@@ -55,7 +55,7 @@ Ex: https://google.com:443
 
 도메인 네임 서버도 또 다시 Root Name Server, Middle Name Server등에 요청하여 주소를 받아온다.
 
-아래의 그림은 HTTPS 프로토콜의 handshake가 일어나는 과정이다.
+아래의 그림은 서버와 클라이언트간의 handshake가 일어나는 과정이다.
 
 ![img/Screen_Shot_2020-12-28_at_6.11.57_PM.png](/assets/img/posts/2020-12-28-what-happens-with-url/Screen_Shot_2020-12-28_at_6.11.57_PM.png)
 
