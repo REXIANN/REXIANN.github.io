@@ -1,13 +1,17 @@
 ---
 layout: post
 title: "http://google.com을 주소창에 치면 무슨일이 일어날까?"
-tags: [HTTP, REST API, collections, document]
+tags: [URL, browser, IP address, DNS, rendering]
 excerpt_separator: <!--more-->
 
 
 ---
 
-## 간략한 순서(면접에서 이정도면 훌-륭)
+브라우저의 주소창에 `https://google.com` 을 입력하고 엔터가 누르면 당연하게도 구글 홈페이지가 나타난다. 그런데 어떻게?
+
+<!--more-->
+
+## 간략한 순서도
 
 1. 브라우저가 URL을 해석한다
 2. 브라우저의 캐시에 해당 도메인이 캐싱되어 있는지 확인한다.
@@ -22,11 +26,14 @@ excerpt_separator: <!--more-->
 - IP: 다양한 NIC(Network Interface Controller)들이 서로를 인식하기 위해 지정받은 식별용 번호이다. 현재는 IPv4 버전(32비트)로 구성되어 있다.(ex: 127.0.0.1) 현재 IPv4 주소의 부족으로 새로 생긴 IPv6의 경우 128비트로 구성되어 있다
 
 ```jsx
+// IPv6의 주소 간략화 과정
 2001:0DB8:0000:0000:0000:0000:1428:57ab
 2001:0DB8:0:0:0:0:1428:57ab
 2001:0DB8::::1428:57ab
 2001:0DB8::1428:57ab
 ```
+
+
 
 - Domain Name(도메인 네임): IP주소는 12자리의 숫자로 되어있기 때문에 사람이 외우기 힘들다는 단점이 있다. 그래서 IP주소를 문자로 표현한 주소를 도메인네임 이라고 한다. 도메인네임은 사람의 편의성을 위해 만든 주소이므로 실제로는 컴퓨터가 이해할 수 있는 IP주소로 변환하는 작업이 필요하다. 이때 사용할 수 있도록 미리 도메인 네임과 해당 IP주소값을 한 쌍으로 저장하고 있는 데이터베이스를 DNS(Domain Name System)이라고 부른다.
 
@@ -48,7 +55,7 @@ Ex: https://google.com:443
 
 도메인 네임 서버도 또 다시 Root Name Server, Middle Name Server등에 요청하여 주소를 받아온다.
 
-![http%20google%20com%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%8C%E1%85%AE%E1%84%89%E1%85%A9%E1%84%8E%E1%85%A1%E1%86%BC%E1%84%8B%E1%85%A6%20%E1%84%8E%E1%85%B5%E1%84%86%E1%85%A7%E1%86%AB%20%E1%84%86%E1%85%AE%E1%84%89%E1%85%B3%E1%86%AB%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8B%E1%85%B5%20%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8B%20d01af986976449108febbc3a18219b57/Screen_Shot_2020-12-28_at_6.11.57_PM.png](http%20google%20com%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%8C%E1%85%AE%E1%84%89%E1%85%A9%E1%84%8E%E1%85%A1%E1%86%BC%E1%84%8B%E1%85%A6%20%E1%84%8E%E1%85%B5%E1%84%86%E1%85%A7%E1%86%AB%20%E1%84%86%E1%85%AE%E1%84%89%E1%85%B3%E1%86%AB%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8B%E1%85%B5%20%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8B%20d01af986976449108febbc3a18219b57/Screen_Shot_2020-12-28_at_6.11.57_PM.png)
+![img/Screen_Shot_2020-12-28_at_6.11.57_PM.png](/assets/img/posts/2020-12-28-what-happens-with-url/Screen_Shot_2020-12-28_at_6.11.57_PM.png)
 
 ### Request 생성 및 캡슐화
 
@@ -67,7 +74,7 @@ Ex: https://google.com:443
 3. 네트워크 계층은 받은 패킷에서 세그먼트를 꺼내 전송 계층으로 전달한다. 
 4. 전송 계층은 받은 세그먼트에서 데이터를 꺼내 원래의 애플리케이션 데이터를 클라이언트 애플리케이션에게 전달한다.
 
-![http%20google%20com%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%8C%E1%85%AE%E1%84%89%E1%85%A9%E1%84%8E%E1%85%A1%E1%86%BC%E1%84%8B%E1%85%A6%20%E1%84%8E%E1%85%B5%E1%84%86%E1%85%A7%E1%86%AB%20%E1%84%86%E1%85%AE%E1%84%89%E1%85%B3%E1%86%AB%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8B%E1%85%B5%20%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8B%20d01af986976449108febbc3a18219b57/Screen_Shot_2020-12-24_at_5.39.15_PM.png](http%20google%20com%E1%84%8B%E1%85%B3%E1%86%AF%20%E1%84%8C%E1%85%AE%E1%84%89%E1%85%A9%E1%84%8E%E1%85%A1%E1%86%BC%E1%84%8B%E1%85%A6%20%E1%84%8E%E1%85%B5%E1%84%86%E1%85%A7%E1%86%AB%20%E1%84%86%E1%85%AE%E1%84%89%E1%85%B3%E1%86%AB%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8B%E1%85%B5%20%E1%84%8B%E1%85%B5%E1%86%AF%E1%84%8B%20d01af986976449108febbc3a18219b57/Screen_Shot_2020-12-24_at_5.39.15_PM.png)
+![img/Screen_Shot_2020-12-24_at_5.39.15_PM.png](/assets/img/posts/2020-12-28-what-happens-with-url/Screen_Shot_2020-12-24_at_5.39.15_PM.png)
 
 ### 렌더링
 
