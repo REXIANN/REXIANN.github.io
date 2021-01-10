@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "📚 디자인 패턴"
-tags: [pattern, ]
+tags: [pattern, SW, design pattern, GoF, OOP]
 excerpt_separator: <!--more-->
 sitemap :
   changefreq : daily
