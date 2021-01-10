@@ -3,7 +3,9 @@ layout: post
 title: "도커로 젠킨스 설치 및 깃랩과 연동"
 tags: [docker, jenkins, gitlab]
 excerpt_separator: <!--more-->
-
+sitemap :
+  changefreq : daily
+  priority : 1.0
 
 ---
 
