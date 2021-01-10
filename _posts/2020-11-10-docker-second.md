@@ -3,6 +3,9 @@ layout: post
 title: "Docker(2)"
 tags: [docker, dockerfile, dockerfile commands]
 excerpt_separator: <!--more-->
+sitemap :
+  changefreq : daily
+  priority : 1.0
 
 ---
 

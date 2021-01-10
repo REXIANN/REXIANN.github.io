@@ -3,7 +3,9 @@ layout: post
 title: "10. JSON"
 tags: [javascript, JSON, AJAX, XML, XHR]
 excerpt_separator: <!--more-->
-
+sitemap :
+  changefreq : daily
+  priority : 1.0
 
 ---
 

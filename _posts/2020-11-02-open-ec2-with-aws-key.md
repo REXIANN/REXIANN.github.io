@@ -3,6 +3,9 @@ layout: post
 title: "AWS key(.pem 파일)를 이용하여 사이트 접속"
 tags: [aws, pem]
 excerpt_separator: <!--more-->
+sitemap :
+  changefreq : daily
+  priority : 1.0
 
 ---
 

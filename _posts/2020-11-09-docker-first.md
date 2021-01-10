@@ -3,7 +3,9 @@ layout: post
 title: "Docker(1)"
 tags: [docker, image, container, docker hub, VCS]
 excerpt_separator: <!--more-->
-
+sitemap :
+  changefreq : daily
+  priority : 1.0
 ---
 
 ## 일단 Docker 설치부터 하자

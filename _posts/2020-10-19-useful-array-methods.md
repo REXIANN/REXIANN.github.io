@@ -3,6 +3,9 @@ layout: post
 title: "9. 유용한 배열 함수들"
 tags: [javascript, array, api, methods]
 excerpt_separator: <!--more-->
+sitemap :
+  changefreq : daily
+  priority : 1.0
 
 ---
 

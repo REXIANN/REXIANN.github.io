@@ -3,6 +3,9 @@ layout: post
 title: "Docker를 이용한 Vuejs 구동"
 tags: [docker, vue]
 excerpt_separator: <!--more-->
+sitemap :
+  changefreq : daily
+  priority : 1.0
 
 ---
 
