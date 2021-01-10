@@ -10,7 +10,9 @@ excerpt_separator: <!--more-->
 
 
 
-## 자바스크립트를 html에 추가하는 방법
+## 자바스크립트를 html에 추가하는 방법은?
+
+<!--more-->
 
  ```html
 <script src="source.js"></script>
@@ -20,7 +22,7 @@ excerpt_separator: <!--more-->
 
 브라우저에는 console, preparation, application, memory등 많은 기능이 있으며 차차 알아가자. 공식문서를 보기 위해서는 developer.mozilla.org(이하 MDN) 라는 사이트를 이용하자! 
 
-<!--more-->
+
 
 ## JS를 포함하는 법 ( async VS defer)
 
