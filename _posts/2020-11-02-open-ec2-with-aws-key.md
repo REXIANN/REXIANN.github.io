@@ -9,9 +9,9 @@ sitemap :
 
 ---
 
-우리가 운영본부로부터 받은 키(`K3A504T.pem` 파일)를 이용하여 사이트에 접속해야 한다. 우리 사이트의 주소는 `ubuntu@k3a504.p.ssafy.io` 이고 사용하게 될 운영체제는 `ubuntu` 이므로 다음과 같이 Secure Shell로 접속을 하자.
+우리가 운영본부로부터 받은 키(`K3A504T.pem` 파일)만 가지고 알아서 웹 서버에 접속해 프로젝트를 배포해야 한다! <!--more-->우리 사이트의 주소는 `ubuntu@k3a504.p.ssafy.io` 이고 사용하게 될 운영체제는 `ubuntu` 이므로 다음과 같이 Secure Shell로 접속을 하자.
 
-<!--more-->
+
 
 ```bash
 $ ssh -i K3A504T.pem ubuntu@k3a504.p.ssafy.io

@@ -9,9 +9,11 @@ excerpt_separator: <!--more-->
 
 ## JavaScript의 역사
 
+<!--more-->
+
 1994년 Marc Andreessen은 Netscape를 설립한다. 그리고 HTML과 CSS를 사용하여 웹 페이지를 꾸미는 것이 가능했었다.  그러나 동적으로 DOM을 조작하기 위한 언어가 새로 필요하다고 판단하여 개발에 착수하였고 1994년 9월, Mocha라는 스크립트 언어를 만들고 Netscape navigator에 이 언어를 해석할 수 있는 엔진(interpreter)을 탑재하였다. Mocha는 다시 LiveScript로 이름을 바꾸고 다시 한번 자바의 인기에 편승하기 위해 JavaScript로 다시 한번 이름을 변경했다. 이것이 오늘날 우리가 알고있는 JavaScript이며 비슷한 이름 때문에 종종 Java와 헷갈리게 만든다.
 
-<!--more-->
+
 
 1995년 마이크로소프트는 Netscape 사의 브라우저를 Reverse engineering하여 JavaScript를 똑같이 구현해내고 이름을 JScript라고 붙였다. 그렇게 JScript를 탑재한 브라우저 Internet Explorer를 만들었다. 이는 웹사이트는 표준의 파편화가 되는 시초가 되게 된다. 브라우저 엔진의 통일을 위해 1997년 Netscape사는 ECMAScript1 language specification라는 표준안을 제정하였다. 그 후 ES는 꾸준히 발전을 거듭하였으며  ECMAScript4에서는 `class`, `optional type annotation`, `Enterprise scale` 등이 추가되기도 했다.
 

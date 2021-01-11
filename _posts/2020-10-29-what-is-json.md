@@ -9,11 +9,11 @@ sitemap :
 
 ---
 
-## 사전정리
+## 📝 사전공부!
 
-HTTP란 Hypertext Transfer Protocol의 약자로 Client와 Server간의 통신의 약속. 클라이언트는 서버에게 데이터를 요청(request)하고 서버는 클라이언트에게 그에 맞는 응답(response)을 보낸다. 여기서 Hypertext란 웹사이트에서 사용되는 하이퍼링크(Hyperlink)뿐만 아니라 전반적으로 사용되는 리소스들(문서, 이미지 등)을 포함해서 말한다. 
+HTTP란 Hypertext Transfer Protocol의 약자로 Client와 Server간의 통신의 약속이다. <!--more-->클라이언트는 서버에게 데이터를 요청(request)하고 서버는 클라이언트에게 그에 맞는 응답(response)을 보낸다. 여기서 Hypertext란 웹사이트에서 사용되는 하이퍼링크(Hyperlink)뿐만 아니라 전반적으로 사용되는 리소스들(문서, 이미지 등)을 포함해서 말한다. 
 
-<!--more-->
+
 
 이렇게 HTTP를 이용해서 서버에서 데이터를 받아오는 방법으로는 AJAX가 있다. Asynchronous JavaAScript and XML의 약자로 웹페이지에서 동적으로 서버에게 데이터를 요청하고 받아오는 기술이다. 대표적인 예로는 XMLHttpRequest라는 오브젝트가 있다. 이 오브젝트는 브라우저 API에서 제공하는 오브젝트 중의 하나로 이 오브젝트를 사용하면 간단하게 서버에게 데이터를 요청하고 받아올 수 있다. 최근 브라우저 API에 추가된 fetch() API를 사용하면 역시 간편하게 데이터를 주고받을 수 있다.    하지만 무조건 신상이라고 해서 바로 사용할 수는 없다는 사실! 이 API는 인터넷 익스플로러에서 지원이 되지 않으니 유의해서 사용하자. 
 

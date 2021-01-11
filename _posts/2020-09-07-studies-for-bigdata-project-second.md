@@ -8,8 +8,10 @@ excerpt_separator: <!--more-->
 
 # 2. 기본 추천 시스템 구축
 
-추천 시스템은 정보 필터링(Information Filtering System) 기술의 일종으로, 특정 사용자가 관심을 가질만한 정보(영화, 음악, 책, 뉴스, 이미지 ,웹 페이지 등)를 추천하는 것이다. 추천시스템에는 대표적으로 컨텐츠 기반 필터링(Content Based Filtering; CBF)과 협업 필터링(Collaborative Filtering; CF)이 있으며 각 방법마다 장단점과 상대적으로 더 적합한 상황들이 있으므로 이를 구분하고 사용하기 위해서는 각 방법론의 특성과 동작방식을 잘 이해해야만 한다.
 <!--more-->
+
+추천 시스템은 정보 필터링(Information Filtering System) 기술의 일종으로, 특정 사용자가 관심을 가질만한 정보(영화, 음악, 책, 뉴스, 이미지 ,웹 페이지 등)를 추천하는 것이다. 추천시스템에는 대표적으로 컨텐츠 기반 필터링(Content Based Filtering; CBF)과 협업 필터링(Collaborative Filtering; CF)이 있으며 각 방법마다 장단점과 상대적으로 더 적합한 상황들이 있으므로 이를 구분하고 사용하기 위해서는 각 방법론의 특성과 동작방식을 잘 이해해야만 한다.
+
 
 
 ## 2-1. 컨텐츠 기반 필터링 (Content Based Filtering, CBF)

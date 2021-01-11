@@ -13,14 +13,14 @@ excerpt_separator: <!--more-->
 
 ## Variable(변수)
 
-JS에서 변수를 만들기 위해서는 `let` 이라는 예약어를 사용한다. 
+JS에서 변수를 만들기 위해서는 `let` 이라는 예약어를 사용한다. <!--more-->
 
 ```javascript
 let message = 'hello world!'
 console.log(message)   // 'hello world!'
 ```
 
-<!--more-->
+
 
 
 
